@@ -21,6 +21,7 @@ class Customer(db.Model):
 
 class Epargne(db.Model):
     __tablename__ = 'customer_epargne'
+    id = db.Column(db.BigInteger, primary_key=True)
     solde = db.Column(db.BigInteger, nullable=False)
     client = db.Column(db.Text)
     numero = db.Column(db.String(255))
@@ -31,6 +32,7 @@ class Epargne(db.Model):
 
 class Transaction(db.Model):
     __tablename__ = 'customer_deposit_withdrawal'
+    id = db.Column(db.BigInteger, primary_key=True)
     libelle = db.Column(db.Text)
     code = db.Column(db.Text)
     sens = db.Column(db.Text)
@@ -67,6 +69,7 @@ class Rebours(db.Model):
 
 class UnpaidAccount(db.Model):
     __tablename__ = 'customer_unpaid'
+    id = db.Column(db.BigInteger, primary_key=True)
     terme = db.Column(db.Text)
     account = db.Column(db.String(255))
     product = db.Column(db.Text)

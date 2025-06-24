@@ -2,6 +2,7 @@ from extensions import db
 
 class CustomerCustomerAccount1(db.Model):
     __tablename__ = 'customer_customeraccount_1'
+    id = db.Column(db.BigInteger, primary_key=True)
     customer = db.Column(db.String(255))
     agence = db.Column(db.Text)
     account = db.Column(db.String(255))
